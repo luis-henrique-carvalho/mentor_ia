@@ -7,7 +7,7 @@ export default async function Home() {
     <div className="font-sans min-h-screen p-8">
       <main className="max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold mb-8 text-center">Lista de Usuários</h1>
-        
+
         {users.length === 0 ? (
           <div className="text-center py-12">
             <p className="text-gray-500 text-lg">Nenhum usuário encontrado</p>
@@ -34,11 +34,10 @@ export default async function Home() {
                     <p className="text-gray-600 dark:text-gray-300">{user.email}</p>
                     <div className="flex items-center mt-2 space-x-2">
                       <span
-                        className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
-                          user.emailVerified
+                        className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${user.emailVerified
                             ? "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
                             : "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200"
-                        }`}
+                          }`}
                       >
                         {user.emailVerified ? "Verificado" : "Não verificado"}
                       </span>
@@ -53,7 +52,7 @@ export default async function Home() {
             ))}
           </div>
         )}
-        
+
         <div className="mt-8 text-center">
           <p className="text-gray-600 dark:text-gray-400">
             Total de usuários: {users.length}
