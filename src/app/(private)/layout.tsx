@@ -1,7 +1,7 @@
 import { AppSidebar } from "@/components/layout/app-sidebar";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 
-export default function CoreLayout({
+export default function PrivateLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -9,10 +9,10 @@ export default function CoreLayout({
   return (
     <SidebarProvider>
       <AppSidebar />
-      <main className="w-full">
+      <section className="w-full">
         <SidebarTrigger />
         {children}
-      </main>
+      </section>
     </SidebarProvider>
   );
 }

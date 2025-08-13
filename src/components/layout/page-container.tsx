@@ -1,10 +1,10 @@
 export const PageContainer = ({ children }: { children: React.ReactNode }) => {
-  return <div className="w-full space-y-6 p-6">{children}</div>;
+  return <main className="w-full space-y-6 p-6" role="main">{children}</main>;
 };
 
 export const PageHeader = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex w-full items-center justify-between">{children}</div>
+    <header className="flex w-full items-center justify-between" role="banner">{children}</header>
   );
 };
 
@@ -29,9 +29,9 @@ export const PageDescription = ({
 };
 
 export const PageActions = ({ children }: { children: React.ReactNode }) => {
-  return <div className="flex items-center gap-2">{children}</div>;
+  return <nav className="flex items-center gap-2" aria-label="Ações da página" role="navigation">{children}</nav>;
 };
 
 export const PageContent = ({ children }: { children: React.ReactNode }) => {
-  return <div className="space-y-6">{children}</div>;
+  return <section className="space-y-6" role="region" aria-label="Conteúdo principal">{children}</section>;
 };
